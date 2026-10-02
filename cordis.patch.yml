@@ -1,0 +1,6 @@
+# dsh-tui-restart-tty-fix bundle patch: mounts the plugin on the profile root.
+# It has no configuration; it only affects a process whose stdin is a terminal.
+
+- insert:
+    - id: restart-tty-fix
+      name: dsh-tui-restart-tty-fix

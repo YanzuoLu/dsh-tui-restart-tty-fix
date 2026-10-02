@@ -1,0 +1,41 @@
+{
+  "name": "dsh-tui-restart-tty-fix",
+  "version": "0.1.0",
+  "description": "Keep the terminal in raw mode after a dsh-tui /restart handoff, so mouse reports are no longer echoed into the prompt as ^[[<35;x;yM",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "dsh-tui",
+    "tty",
+    "termios"
+  ],
+  "license": "MIT",
+  "author": "Yanzuo Lu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YanzuoLu/dsh-tui-restart-tty-fix.git"
+  },
+  "homepage": "https://github.com/YanzuoLu/dsh-tui-restart-tty-fix#readme",
+  "bugs": {
+    "url": "https://github.com/YanzuoLu/dsh-tui-restart-tty-fix/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-harness-tui/dsh-tui": ">=0.12.0"
+  }
+}
